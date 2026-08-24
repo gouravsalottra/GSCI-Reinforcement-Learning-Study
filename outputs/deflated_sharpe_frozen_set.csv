@@ -1,0 +1,10 @@
+strategy,observations,frozen_trial_count,annualized_excess_sharpe,estimated_skewness,estimated_kurtosis,deflated_sharpe_probability,scope_warning
+equal_weight,89,9,0.9208306966445851,-0.41499209371484647,3.8380415566783377,0.8167603353452052,"Corrects only for the explicitly frozen strategy set, not all historical exploratory trials"
+inverse_vol_12m,89,9,1.0121834702840447,-0.3268412687281851,3.6893785781198525,0.8721126714111979,"Corrects only for the explicitly frozen strategy set, not all historical exploratory trials"
+momentum_6m_top2_invvol,89,9,1.1117217256242349,0.17431994733809114,3.2679338235342783,0.9316186776697828,"Corrects only for the explicitly frozen strategy set, not all historical exploratory trials"
+momentum_12m_top2_invvol,89,9,0.9762468894500633,0.05814490700903368,3.3318637750477667,0.8657413071056699,"Corrects only for the explicitly frozen strategy set, not all historical exploratory trials"
+absolute_momentum_12m_cash,89,9,0.9605939563829357,-0.20470822640389616,3.0299279126053187,0.8490144746826713,"Corrects only for the explicitly frozen strategy set, not all historical exploratory trials"
+supervised_selector,89,9,0.7545473815407335,-0.06584124879138062,3.6593595313980436,0.6953086101826595,"Corrects only for the explicitly frozen strategy set, not all historical exploratory trials"
+ppo_10_seed_ensemble,89,9,0.43779292418280724,1.1142243463652344,12.754067214932823,0.3623562138362012,"Corrects only for the explicitly frozen strategy set, not all historical exploratory trials"
+GSG_buy_and_hold,89,9,0.47742179699052184,-0.6471728737008101,8.193486278064924,0.4148693147531299,"Corrects only for the explicitly frozen strategy set, not all historical exploratory trials"
+DBC_buy_and_hold,89,9,0.5943728772163298,-0.32873209782877477,4.157363037004932,0.5340495686780365,"Corrects only for the explicitly frozen strategy set, not all historical exploratory trials"

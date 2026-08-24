@@ -1,0 +1,18 @@
+column,role,source,definition,information_available
+state__dbe__momentum_6m,primary state feature,"CRSP msf_v2.mthret, PERMNO 91709",Compounded return over months t-5 through t,Month-end t
+state__dbe__momentum_12m,primary state feature,"CRSP msf_v2.mthret, PERMNO 91709",Compounded return over months t-11 through t,Month-end t
+state__dbe__volatility_12m,primary state feature,"CRSP msf_v2.mthret, PERMNO 91709",Sample standard deviation of returns from t-11 through t,Month-end t
+state__gld__momentum_6m,primary state feature,"CRSP msf_v2.mthret, PERMNO 90448",Compounded return over months t-5 through t,Month-end t
+state__gld__momentum_12m,primary state feature,"CRSP msf_v2.mthret, PERMNO 90448",Compounded return over months t-11 through t,Month-end t
+state__gld__volatility_12m,primary state feature,"CRSP msf_v2.mthret, PERMNO 90448",Sample standard deviation of returns from t-11 through t,Month-end t
+state__dba__momentum_6m,primary state feature,"CRSP msf_v2.mthret, PERMNO 91712",Compounded return over months t-5 through t,Month-end t
+state__dba__momentum_12m,primary state feature,"CRSP msf_v2.mthret, PERMNO 91712",Compounded return over months t-11 through t,Month-end t
+state__dba__volatility_12m,primary state feature,"CRSP msf_v2.mthret, PERMNO 91712",Sample standard deviation of returns from t-11 through t,Month-end t
+state__dbb__momentum_6m,primary state feature,"CRSP msf_v2.mthret, PERMNO 91715",Compounded return over months t-5 through t,Month-end t
+state__dbb__momentum_12m,primary state feature,"CRSP msf_v2.mthret, PERMNO 91715",Compounded return over months t-11 through t,Month-end t
+state__dbb__volatility_12m,primary state feature,"CRSP msf_v2.mthret, PERMNO 91715",Sample standard deviation of returns from t-11 through t,Month-end t
+state__macro__cpi_inflation_yoy_lag1,secondary sensitivity only,FRED CPIAUCSL,12-month percentage change,Shifted 1 month(s); Current FRED vintage may contain historical revisions
+state__macro__industrial_production_yoy_lag1,secondary sensitivity only,FRED INDPRO,12-month percentage change,Shifted 1 month(s); Current FRED vintage may contain historical revisions
+state__macro__dollar_momentum_12m_lag1,secondary sensitivity only,FRED DTWEXBGS,"month-end level, then 12-month percentage change",Shifted 1 month(s); Financial series; one-month conservative lag
+state__macro__yield_curve_lag1,secondary sensitivity only,FRED T10Y2Y,month-end level,Shifted 1 month(s); Financial series; one-month conservative lag
+cash return proxy for next holding month,risk-free proxy,FRED DGS3MO,month-end annual percentage yield divided by 1200,Shifted 0 month(s); Yield-based monthly cash-return approximation

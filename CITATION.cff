@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or its derived outputs, please cite the published article."
+title: "Replication Package for Do Reinforcement Learning Agents Improve Commodity Sector Rotation?"
+type: software
+authors:
+  - family-names: Salotra
+    given-names: Gourav
+    orcid: "https://orcid.org/0009-0004-5337-2155"
+  - family-names: Pinsky
+    given-names: Eugene
+    orcid: "https://orcid.org/0000-0002-3836-1851"
+version: 1.0.0
+date-released: 2026-08-24
+license: MIT
+repository-code: "https://github.com/gouravsalottra/GSCI-Reinforcement-Learning-Study"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Salotra
+      given-names: Gourav
+    - family-names: Pinsky
+      given-names: Eugene
+  title: "Do Reinforcement Learning Agents Improve Commodity Sector Rotation? Walk-Forward Evidence from Expert Selection, Strong Benchmarks, and a Frozen-Policy Temporal Extension"
+  journal: Risks
+  year: 2026
+  volume: 14
+  issue: 9
+  start: 188
+  end: 188
+  doi: "10.3390/risks14090188"

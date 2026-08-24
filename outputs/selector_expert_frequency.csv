@@ -1,0 +1,6 @@
+expert,selected_months,selection_fraction
+equal_weight,8,0.0898876404494382
+inverse_vol_12m,11,0.12359550561797752
+momentum_6m_top2_invvol,23,0.25842696629213485
+momentum_12m_top2_invvol,9,0.10112359550561797
+absolute_momentum_12m_cash,38,0.42696629213483145

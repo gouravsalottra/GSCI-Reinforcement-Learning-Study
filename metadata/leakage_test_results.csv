@@ -1,0 +1,9 @@
+test,value,tolerance,status,detail
+No target or benchmark column used as a feature,0,0,PASS,[]
+All asset targets equal exact t+1 returns,0.0,1e-15,PASS,See target_alignment_audit.csv
+Future-return perturbation cannot change past features,0.0,1e-15,PASS,Returns after 2018-12 were increased by 5.0
+Primary scaler fitted only through training targets,2018-12-31,2018-12-31,PASS,Fit rows: 132
+Scaled training-feature mean approximately zero,4.306319610667274e-16,1e-12,PASS,Maximum absolute training mean
+Scaled training-feature standard deviation equals one,1.1102230246251565e-16,1e-12,PASS,Maximum absolute standard-deviation error
+Macro variables excluded from primary specification,0,0,PASS,Lagged macro variables retained only for sensitivity
+All four secondary macro features have explicit lag,0,4,NOT RUN,Current FRED vintage remains revision-sensitive; therefore macro specification is secondary only

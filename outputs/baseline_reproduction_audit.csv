@@ -1,0 +1,6 @@
+strategy,historical_weight_maximum_error,status
+equal_weight,0.0,PASS
+inverse_vol_12m,0.0,PASS
+momentum_6m_top2_invvol,0.0,PASS
+momentum_12m_top2_invvol,0.0,PASS
+absolute_momentum_12m_cash,0.0,PASS

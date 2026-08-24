@@ -1,0 +1,100 @@
+{
+  "publication_sample": {
+    "first_target": "2019-01-31",
+    "last_target": "2026-05-31",
+    "months": 89,
+    "temporal_extension_months": 17
+  },
+  "combined_primary_findings": {
+    "momentum_6m_top2_invvol": {
+      "cagr": 0.18564294289404737,
+      "excess_sharpe": 1.1117217256242347,
+      "maximum_drawdown": -0.12268322798664655
+    },
+    "supervised_selector": {
+      "cagr": 0.1600764615071808,
+      "excess_sharpe": 0.7545473815407335,
+      "maximum_drawdown": -0.17469074919453131
+    },
+    "ppo_10_seed_ensemble": {
+      "cagr": 0.09558414552385641,
+      "excess_sharpe": 0.43779292418280724,
+      "maximum_drawdown": -0.29891377513174744
+    },
+    "GSG_buy_and_hold": {
+      "cagr": 0.11675185180008096,
+      "excess_sharpe": 0.47742179699052184,
+      "maximum_drawdown": -0.48261166154035173
+    },
+    "DBC_buy_and_hold": {
+      "cagr": 0.12362095563533715,
+      "excess_sharpe": 0.5943728772163298,
+      "maximum_drawdown": -0.31661447567621004
+    }
+  },
+  "temporal_extension_findings": {
+    "momentum_6m_top2_invvol": {
+      "cagr": 0.24214061691148814,
+      "excess_sharpe": 1.395821639475503
+    },
+    "supervised_selector": {
+      "cagr": 0.31857100195476074,
+      "excess_sharpe": 1.2035822125669575
+    },
+    "ppo_10_seed_ensemble": {
+      "cagr": 0.40721815408159023,
+      "excess_sharpe": 1.20576588939282
+    },
+    "GSG_buy_and_hold": {
+      "cagr": 0.306669325558133,
+      "excess_sharpe": 1.030292239626724
+    },
+    "DBC_buy_and_hold": {
+      "cagr": 0.2838343581222389,
+      "excess_sharpe": 1.2385790121337636
+    }
+  },
+  "march_2026": {
+    "ppo_net_return": 0.2891550448110064,
+    "momentum_net_return": -0.06701111764528635,
+    "ppo_dbe_weight": 0.6828375789270009,
+    "dbe_return": 0.43615984405458086
+  },
+  "reproduction_gates": {
+    "baselines": [
+      {
+        "strategy": "equal_weight",
+        "historical_weight_maximum_error": 0.0,
+        "status": "PASS"
+      },
+      {
+        "strategy": "inverse_vol_12m",
+        "historical_weight_maximum_error": 0.0,
+        "status": "PASS"
+      },
+      {
+        "strategy": "momentum_6m_top2_invvol",
+        "historical_weight_maximum_error": 0.0,
+        "status": "PASS"
+      },
+      {
+        "strategy": "momentum_12m_top2_invvol",
+        "historical_weight_maximum_error": 0.0,
+        "status": "PASS"
+      },
+      {
+        "strategy": "absolute_momentum_12m_cash",
+        "historical_weight_maximum_error": 0.0,
+        "status": "PASS"
+      }
+    ],
+    "selector": [
+      {
+        "historical_selected_experts_exact": true,
+        "historical_prediction_maximum_error": 5.204170427930421e-18,
+        "historical_weight_maximum_error": 0.0,
+        "status": "PASS"
+      }
+    ]
+  }
+}

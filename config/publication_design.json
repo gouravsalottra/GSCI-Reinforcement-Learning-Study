@@ -1,0 +1,19 @@
+{
+  "article_doi": "10.3390/risks14090188",
+  "rotation_assets": ["DBE", "GLD", "DBA", "DBB"],
+  "investable_benchmarks": ["GSG", "DBC"],
+  "training_target_start": "2008-01-31",
+  "training_target_end": "2018-12-31",
+  "original_oos_target_start": "2019-01-31",
+  "original_oos_target_end": "2024-12-31",
+  "temporal_extension_target_start": "2025-01-31",
+  "temporal_extension_target_end": "2026-05-31",
+  "unified_oos_months": 89,
+  "primary_transaction_cost_bps": 10,
+  "turnover_definition": "one-half L1 distance from drifted pre-trade weights",
+  "primary_rule_benchmark": "momentum_6m_top2_invvol",
+  "ppo_seeds": [1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010],
+  "bootstrap_replications": 5000,
+  "bootstrap_block_lengths_months": [3, 6, 12],
+  "publication_endpoint_excludes_provisional_june_2026": true
+}

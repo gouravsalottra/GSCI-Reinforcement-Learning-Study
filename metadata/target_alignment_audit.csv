@@ -1,0 +1,7 @@
+test,maximum_absolute_error,status
+DBE target equals next-month return,0.0,PASS
+GLD target equals next-month return,0.0,PASS
+DBA target equals next-month return,0.0,PASS
+DBB target equals next-month return,0.0,PASS
+GSG benchmark equals next-month return,0.0,PASS
+DBC benchmark equals next-month return,0.0,PASS

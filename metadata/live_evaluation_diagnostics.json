@@ -1,0 +1,9 @@
+{
+  "frozen_ppo_reproduction_maximum_error": 1.3877787807814457e-17,
+  "temporal_extension_months": 17,
+  "temporal_extension_start": "2025-01-31",
+  "temporal_extension_end": "2026-05-31",
+  "no_retraining_or_hyperparameter_changes": true,
+  "march_2026_ppo_return": 0.2891550448110064,
+  "march_2026_momentum_return": -0.06701111764528635
+}

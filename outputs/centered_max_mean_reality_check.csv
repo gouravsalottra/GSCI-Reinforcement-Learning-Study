@@ -1,0 +1,4 @@
+benchmark,candidate_count,candidate_set,observed_best_candidate,observed_max_annualized_mean_difference,block_length,replications,centered_max_mean_p_value
+momentum_6m_top2_invvol,8,equal_weight | inverse_vol_12m | momentum_12m_top2_invvol | absolute_momentum_12m_cash | supervised_selector | ppo_10_seed_ensemble | GSG_buy_and_hold | DBC_buy_and_hold,absolute_momentum_12m_cash,0.04612255385124144,3,5000,0.5398920215956808
+momentum_6m_top2_invvol,8,equal_weight | inverse_vol_12m | momentum_12m_top2_invvol | absolute_momentum_12m_cash | supervised_selector | ppo_10_seed_ensemble | GSG_buy_and_hold | DBC_buy_and_hold,absolute_momentum_12m_cash,0.04612255385124144,6,5000,0.529494101179764
+momentum_6m_top2_invvol,8,equal_weight | inverse_vol_12m | momentum_12m_top2_invvol | absolute_momentum_12m_cash | supervised_selector | ppo_10_seed_ensemble | GSG_buy_and_hold | DBC_buy_and_hold,absolute_momentum_12m_cash,0.04612255385124144,12,5000,0.5100979804039192

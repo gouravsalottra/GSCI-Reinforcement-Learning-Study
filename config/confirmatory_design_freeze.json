@@ -1,0 +1,137 @@
+{
+  "study_title_working": "Learning-Based Commodity ETF Rotation under Small Samples: Walk-Forward Evidence from Transparent Rules, Supervised Expert Selection, and Reinforcement Learning",
+  "data_source": {
+    "asset_returns": "CRSP msf_v2.mthret",
+    "cash_returns": "CRSP mcti.t30ret",
+    "return_frequency": "monthly",
+    "return_type": "total return"
+  },
+  "instrument_map": {
+    "DBE": {
+      "permno": 91709,
+      "role": "energy commodity ETF proxy"
+    },
+    "GLD": {
+      "permno": 90448,
+      "role": "gold ETF proxy"
+    },
+    "DBA": {
+      "permno": 91712,
+      "role": "agriculture commodity ETF proxy"
+    },
+    "DBB": {
+      "permno": 91715,
+      "role": "base-metals commodity ETF proxy"
+    },
+    "GSG": {
+      "permno": 91381,
+      "role": "investable broad commodity benchmark"
+    },
+    "DBC": {
+      "permno": 91129,
+      "role": "alternative investable commodity benchmark"
+    },
+    "CPER": {
+      "permno": 13102,
+      "role": "shorter-history copper robustness asset"
+    }
+  },
+  "primary_universe": [
+    "DBE",
+    "GLD",
+    "DBA",
+    "DBB"
+  ],
+  "benchmarks": [
+    "GSG",
+    "DBC"
+  ],
+  "cash": "CRSP 30-day Treasury-bill total return",
+  "sample": {
+    "first_training_state": "2007-12-31",
+    "first_training_target": "2008-01-31",
+    "last_training_target": "2018-12-31",
+    "training_rows": 132,
+    "first_oos_target": "2019-01-31",
+    "last_oos_target": "2024-12-31",
+    "oos_rows": 72,
+    "reason_for_2024_end": "CRSP mcti.t30ret ends in December 2024; no 2025 cash returns were imputed"
+  },
+  "timing": {
+    "state": "information available through month-end t",
+    "decision": "portfolio weights selected at month-end t",
+    "target": "total return earned during month t+1",
+    "split_definition": "training and OOS membership determined by target month"
+  },
+  "primary_features": {
+    "count": 12,
+    "features_per_asset": [
+      "6-month compounded momentum",
+      "12-month compounded momentum",
+      "12-month realized volatility"
+    ],
+    "macro_features_in_primary": false,
+    "reason_macro_excluded": "Primary design avoids revised macro-vintage exposure"
+  },
+  "transparent_strategies": [
+    "equal_weight",
+    "inverse_vol_12m",
+    "momentum_6m_top2_invvol",
+    "momentum_12m_top2_invvol",
+    "absolute_momentum_12m_cash"
+  ],
+  "primary_transparent_benchmark": "momentum_6m_top2_invvol",
+  "transaction_costs": {
+    "primary_basis_points": 10,
+    "sensitivity_basis_points": [
+      0,
+      5,
+      10,
+      25
+    ],
+    "turnover_definition": "one-half L1 distance from drifted pre-rebalance weights"
+  },
+  "selector": {
+    "name": "supervised expanding-window expert selector",
+    "estimator": "GradientBoostingRegressor",
+    "n_estimators": 50,
+    "learning_rate": 0.03,
+    "max_depth": 2,
+    "min_samples_leaf": 10,
+    "subsample": 1.0,
+    "loss": "squared_error",
+    "hyperparameter_search": false,
+    "random_seed": 20260722
+  },
+  "inference": {
+    "bootstrap_type": "circular moving-block bootstrap",
+    "block_lengths": [
+      3,
+      6,
+      12
+    ],
+    "primary_block_length": 6,
+    "replications": 5000,
+    "multiple_comparison_adjustment": "Holm",
+    "model_set_test": "centered moving-block max-mean reality check"
+  },
+  "confirmed_primary_result": {
+    "winner": "momentum_6m_top2_invvol",
+    "winner_cagr": 0.172683,
+    "winner_excess_sharpe": 1.041281,
+    "selector_cagr": 0.125524,
+    "selector_excess_sharpe": 0.624771,
+    "selector_minus_winner_annualized_mean": -0.035784,
+    "selector_vs_winner_bootstrap_p": 0.629274,
+    "selector_vs_winner_holm_p": 1.0,
+    "interpretation": "The supervised selector does not outperform the strong transparent momentum benchmark"
+  },
+  "prohibited_claims": [
+    "Do not call the supervised selector a contextual bandit.",
+    "Do not claim deep learning or reinforcement learning dominates.",
+    "Do not claim the primary study extends through 2025 or 2026.",
+    "Do not call unadjusted return divided by volatility a Sharpe ratio.",
+    "Do not use the old synthetic GSCI spot proxy as the primary benchmark.",
+    "Do not hide the momentum benchmark or multiple-testing results."
+  ]
+}

@@ -1,0 +1,13 @@
+feature,maximum_absolute_error,status
+state__dbe__momentum_6m,0.0,PASS
+state__dbe__momentum_12m,0.0,PASS
+state__dbe__volatility_12m,0.0,PASS
+state__gld__momentum_6m,0.0,PASS
+state__gld__momentum_12m,0.0,PASS
+state__gld__volatility_12m,0.0,PASS
+state__dba__momentum_6m,0.0,PASS
+state__dba__momentum_12m,0.0,PASS
+state__dba__volatility_12m,0.0,PASS
+state__dbb__momentum_6m,0.0,PASS
+state__dbb__momentum_12m,0.0,PASS
+state__dbb__volatility_12m,0.0,PASS
