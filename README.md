@@ -1,5 +1,9 @@
 # Replication Package: Commodity Sector Rotation with Reinforcement Learning
 
+[![Validation](https://github.com/gouravsalottra/GSCI-Reinforcement-Learning-Study/actions/workflows/validate.yml/badge.svg)](https://github.com/gouravsalottra/GSCI-Reinforcement-Learning-Study/actions/workflows/validate.yml)
+[![DOI](https://img.shields.io/badge/DOI-10.3390%2Frisks14090188-blue)](https://doi.org/10.3390/risks14090188)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 This repository contains the replication materials for:
 
 > Gourav Salotra and Eugene Pinsky (2026), “Do Reinforcement Learning Agents Improve Commodity Sector Rotation? Walk-Forward Evidence from Expert Selection, Strong Benchmarks, and a Frozen-Policy Temporal Extension,” *Risks*, 14(9), 188. <https://doi.org/10.3390/risks14090188>
@@ -60,6 +64,8 @@ python -m unittest discover -s tests -v
 ```
 
 These commands verify the deposited output contract, headline values, model archive, expected figure set, file naming, and SHA-256 checksums. They do not require CRSP.
+
+The same audit runs automatically on every GitHub push and pull request through `.github/workflows/validate.yml` using read-only repository permissions.
 
 ## Full reconstruction with WRDS/CRSP access
 
